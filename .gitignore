@@ -1,0 +1,18 @@
+node_modules
+
+/content/panorama/layout
+
+# Dota 2 stuff
+*.bin
+*.vcss_c
+*.vxml_c
+*.vtex_c
+*.vjs_c
+*.vpcf_c
+*.vmat_c
+*.vpk
+*.vmdl_c
+*.vmesh_c
+*.vsndevts_c
+*.vsnd_c
+panorama_debugger.cfg

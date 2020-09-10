@@ -1,0 +1,17 @@
+{
+    "name": "",
+    "scripts": {
+        "postinstall": "node scripts/install.js",
+        "launch": "node scripts/launch.js",
+        "build": "node --preserve-symlinks node_modules/webpack/bin/webpack.js --config content/panorama/webpack.config.js",
+        "dev": "node --preserve-symlinks node_modules/webpack/bin/webpack.js --config content/panorama/webpack.config.js --watch"
+    },
+    "devDependencies": {
+        "file-loader": "^6.1.0",
+        "find-steam-app": "^1.0.2",
+        "fs-extra": "^9.0.0",
+        "webpack": "^5.0.0-beta.30",
+        "webpack-cli": "^3.3.12",
+        "webpack-panorama": "^0.2.0"
+    }
+}
