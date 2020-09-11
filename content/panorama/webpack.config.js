@@ -1,4 +1,5 @@
 const path = require("path");
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const { PanoramaManifestPlugin, PanoramaTargetPlugin } = require("webpack-panorama");
 
 /** @type {import('webpack').Configuration} */
@@ -11,13 +12,15 @@ module.exports = {
     },
 
     resolve: {
+        extensions: [".ts", ".tsx", "..."],
         symlinks: false,
     },
 
     module: {
         rules: [
             { test: /\.xml$/, loader: "webpack-panorama/lib/layout-loader" },
-            { test: /\.js$/, issuer: /\.xml$/, loader: "webpack-panorama/lib/entry-loader" },
+            { test: /\.[jt]sx?$/, issuer: /\.xml$/, loader: "webpack-panorama/lib/entry-loader" },
+            { test: /\.tsx?$/, loader: "ts-loader", options: { transpileOnly: true } },
             {
                 test: /\.css$/,
                 issuer: /\.xml$/,
@@ -34,6 +37,11 @@ module.exports = {
                 { import: "./loading-screen/layout.xml", filename: "custom_loading_screen.xml" },
                 { import: "./hud/layout.xml", type: "Hud" },
             ],
+        }),
+        new ForkTsCheckerWebpackPlugin({
+            typescript: {
+                configFile: path.resolve(__dirname, "tsconfig.json"),
+            },
         }),
     ],
 };

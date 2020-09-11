@@ -1,6 +1,6 @@
 <root>
     <scripts>
-        <include src="./script.js" />
+        <include src="./script.ts" />
     </scripts>
     <styles>
         <include src="./styles.css" />

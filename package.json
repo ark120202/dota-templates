@@ -6,10 +6,16 @@
         "build": "node --preserve-symlinks node_modules/webpack/bin/webpack.js --config content/panorama/webpack.config.js",
         "dev": "node --preserve-symlinks node_modules/webpack/bin/webpack.js --config content/panorama/webpack.config.js --watch"
     },
+    "dependencies": {
+        "panorama-types": "^1.5.2"
+    },
     "devDependencies": {
         "file-loader": "^6.1.0",
         "find-steam-app": "^1.0.2",
+        "fork-ts-checker-webpack-plugin": "^5.1.0",
         "fs-extra": "^9.0.0",
+        "ts-loader": "^8.0.3",
+        "typescript": "^4.0.2",
         "webpack": "^5.0.0-beta.30",
         "webpack-cli": "^3.3.12",
         "webpack-panorama": "^0.2.0"
