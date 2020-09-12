@@ -7,7 +7,10 @@
         "dev": "node --preserve-symlinks node_modules/webpack/bin/webpack.js --config content/panorama/webpack.config.js --watch"
     },
     "dependencies": {
-        "panorama-types": "^1.5.2"
+        "@types/react": "^16.9.49",
+        "panorama-types": "^1.5.2",
+        "react": "^16.13.1",
+        "react-panorama": "^0.1.0"
     },
     "devDependencies": {
         "file-loader": "^6.1.0",
