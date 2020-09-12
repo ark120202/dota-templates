@@ -18,6 +18,7 @@ module.exports = {
         rules: [
             { test: /\.xml$/, loader: "webpack-panorama/lib/layout-loader" },
             { test: /\.js$/, issuer: /\.xml$/, loader: "webpack-panorama/lib/entry-loader" },
+            { test: /\.js$/, loader: "babel-loader", options: { presets: ["@babel/preset-react"] } },
             {
                 test: /\.css$/,
                 issuer: /\.xml$/,

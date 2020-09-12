@@ -3,6 +3,7 @@
         <include src="./script.js" />
     </scripts>
     <styles>
+        <include src="s2r://panorama/styles/dotastyles.vcss_c" />
         <include src="./styles.css" />
     </styles>
     <Panel class="root" />

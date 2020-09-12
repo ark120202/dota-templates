@@ -1,6 +1,6 @@
-# `dota-templates/webpack`
+# `dota-templates/webpack-react`
 
-A template for Dota 2 Custom Games with webpack. Check out [this tutorial](https://moddota.com/panorama/webpack) for more information.
+A template for Dota 2 Custom Games with webpack and React. Check out [this tutorial](https://moddota.com/panorama/react) for more information.
 
 ## Getting Started
 
